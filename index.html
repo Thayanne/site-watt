@@ -33,13 +33,18 @@
 			
 			function show(cont) {
 				$("#conteudo-"+cont).show();
+				$("#"+cont).addClass("selecionada");
 			}
 			
 			function hideAll() {
 				$("#conteudo-pagina-inicial").hide();
+				$("#pagina-inicial").removeClass("selecionada");
 				$("#conteudo-servicos").hide();
+				$("#servicos").removeClass("selecionada");
 				$("#conteudo-sobre").hide();
+				$("#sobre").removeClass("selecionada");
 				$("#conteudo-contato").hide();
+				$("#contato").removeClass("selecionada");
 			}
 			
 		});
