@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="layout.css" rel="stylesheet" type="text/css" />
+
+<script src="jquery.js"></script>
+    <script>
+		$(document).ready(function() {
+			hideAll();
+			show("pagina-inicial");
+			
+			$("#pagina-inicial").click(function( event ) {
+				hideAll();
+				show("pagina-inicial");
+			});
+			
+			$("#servicos").click(function( event ) {
+				hideAll();
+				show("servicos");
+			});
+			
+			$("#sobre").click(function( event ) {
+				hideAll();
+				show("sobre");
+			});
+			
+			$("#contato").click(function( event ) {
+				hideAll();
+				show("contato");
+			});
+			
+			function show(cont) {
+				$("#conteudo-"+cont).show();
+			}
+			
+			function hideAll() {
+				$("#conteudo-pagina-inicial").hide();
+				$("#conteudo-servicos").hide();
+				$("#conteudo-sobre").hide();
+				$("#conteudo-contato").hide();
+			}
+			
+		});
+    </script>
+
+<title>Watt Eletricidade</title>
+</head>
+
+<body>
+
+    <div id="top"> </div>
+    
+    <div id="menu">
+        <ul>
+            <li><a id="pagina-inicial" href="#">Página Inicial</a></li>
+            <li><a id="servicos" href="#">Serviços</a></li>
+            <li><a id="sobre" href="#">Sobre</a></li>
+            <li><a id="contato" href="#">Contato</a></li>
+        </ul>    
+    </div>
+    
+    <div id="conteudo-pagina-inicial"> Página inicial </div>
+    <div id="conteudo-servicos"> Serviços </div>
+    <div id="conteudo-sobre"> Sobre </div>
+    <div id="conteudo-contato"> Contato </div>
+    
+</body>
+</html>

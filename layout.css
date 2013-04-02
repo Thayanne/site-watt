@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+        margin:0;
+        padding:0;
+        background: #FFFFFF;
+}
+
+#top{
+        width:1280px;
+        height:300px;
+        margin:0 auto;
+        background: #FFFFFF;
+		background-image:url('topo.jpg');
+}
+
+#menu{
+        width:1280px;
+        height:50px;
+        margin-top:0;
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom:10px;
+        background:#CCCCCC;
+}
+
+#menu ul{
+        margin:0 auto;
+        text-decoration:none;
+}
+
+#menu ul li{
+        display:inline;
+}
+
+#menu ul li a{
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        display:block;
+        float:left;
+        text-decoration:none;
+        font-size:18px;
+        padding:0 15px;
+        line-height: 50px;
+        color:#000000;
+}
+
+#menu ul li a:hover{
+        background:#FF0000;
+        color:#FFFFFF;
+}
