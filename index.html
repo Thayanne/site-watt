@@ -11,28 +11,32 @@
 			hideAll();
 			show("pagina-inicial");
 			
-			$("#pagina-inicial").click(function( event ) {
+			$("#pagina-inicial").click(function(event) {
 				hideAll();
 				show("pagina-inicial");
+				return false;
 			});
 			
-			$("#servicos").click(function( event ) {
+			$("#servicos").click(function(event) {
 				hideAll();
 				show("servicos");
+				return false;
 			});
 			
-			$("#sobre").click(function( event ) {
+			$("#sobre").click(function(event) {
 				hideAll();
 				show("sobre");
+				return false;
 			});
 			
-			$("#contato").click(function( event ) {
+			$("#contato").click(function(event) {
 				hideAll();
 				show("contato");
+				return false;
 			});
 			
 			function show(cont) {
-				$("#conteudo-"+cont).show();
+				$("#conteudo-"+cont).fadeIn("slow");
 				$("#"+cont).addClass("selecionada");
 			}
 			
