@@ -11,7 +11,7 @@ $email=$_POST['email'];
 $telefone=$_POST['telefone'];
 $texto=$_POST['texto'];
 
-$Destinatario="thayanne_viegas@hotmail.com";
+$Destinatario="lucasnadalutti@gmail.com";
 
 $mensagem1="
 Uma mensagem vinda do site !
