@@ -6,6 +6,7 @@
 </head>
 
 <?
+
 $nome=$_POST['nome'];
 $email=$_POST['email'];
 $telefone=$_POST['telefone'];
@@ -13,8 +14,8 @@ $texto=$_POST['texto'];
 
 $Destinatario="lucasnadalutti@gmail.com";
 
-$mensagem1="
-Uma mensagem vinda do site !
+$mensagem1=
+"Uma mensagem vinda do site!
 Algum vistante mandou essa mensagem pelo site.
 Nome: $nome
 Email: $email
@@ -22,6 +23,9 @@ Telefone: $telefone
 Mensagem: $texto";
 
 mail("$Destinatario", "$mensagem1","From:$email");
+
+echo "<script>alert (\"js inside php\")</script>";
+
 ?>
 <html>
 <body>
