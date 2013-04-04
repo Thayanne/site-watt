@@ -198,3 +198,7 @@ input[type=text], textarea {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4685d', endColorstr='#fc8d83');
 	background-color:#e4685d;
 }
+
+.linha_hover {
+  background-color: #000000;
+}
