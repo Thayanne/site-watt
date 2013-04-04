@@ -1,7 +1,7 @@
 jQuery.ketchup
 
 .validation('required', 'Este campo é obrigatório!', function(form, el, value) {
-  var type = el.attr('type').toLowerCase();
+  var type = el.attr('type') === undefined ? undefined : el.attr('type').toLowerCase();
   
   if(type == 'checkbox' || type == 'radio') {
     return (el.attr('checked') == true);
