@@ -57,6 +57,22 @@
 		
 		$('#form').ketchup();
 		
+		$("#form").submit(function(e) {
+			if ( $("#form").ketchup("isValid") ) {
+				var dataString = $("#form").serialize();
+				$.ajax({
+					type: "POST",
+					url: "contato.php",
+					data: dataString,
+					//success: function() {
+					//	alert("AAA");
+					//}
+				});
+			};
+		});
+		
+		/*$('#form').ketchup();
+		
 		$('#submit').on('click', function() {
 			var dataString = $("#form").serialize();
 			$.ajax({
@@ -67,7 +83,7 @@
 				//	alert("AAA");
 				//}
 			});
-		});
+		});*/
 
 	});
 </script>
