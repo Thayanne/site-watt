@@ -65,12 +65,12 @@
 					url: "contato.php",
 					data: dataString,
 					success: function() {
-						alert("Sua mensagem foi enviada com sucesso para o nosso e-mail. Obrigado!");
+						$("#form").find(":input").each(function() {
+							if (this.type == "text" || this.type == "textarea")
+								$(this).val("");
+						});
+						alert("Mensagem enviada com sucesso para o nosso e-mail. Obrigado!");
 					}
-				});
-				$("#form").find(":input").each(function() {
-					if (this.type == "text" || this.type == "textarea")
-						$(this).val("");
 				});
 			};
 		});

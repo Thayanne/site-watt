@@ -19,6 +19,4 @@ Mensagem: $texto";
 
 mail("$Destinatario", "$mensagem","From:$email");
 
-echo "Hello";
-
 ?>
