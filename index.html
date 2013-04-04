@@ -56,6 +56,22 @@
 		}
 		
 		$('#form').ketchup();
+		
+		$('#submit').on('click', function() {
+        var nome = $('#nome').val();
+        var email = $('#email').val();
+        var telefone = $('#telefone').val();
+        var texto = $('#texto').val();
+        var dataString = 'nome=' + nome + '&email=' + email + '&telefone=' + telefone + '&texto=' + texto;
+        $.ajax({
+            type: "POST",
+            url: "process.php",
+            data: dataString,
+            success: function() {
+                
+            }
+        });
+    });
 
 	});
 </script>
@@ -64,15 +80,6 @@
 </head>
 
 <body>
-
-<?php
-if(isset($_POST['submit'])) {
-
-
-    
-    echo "<script>alert (\"Sua mensagem foi enviada com sucesso para o nosso e-mail. Obrigado!\")</script>";
-}
-?>
 
     <div id="top"> </div>
     
