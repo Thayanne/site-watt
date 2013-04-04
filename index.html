@@ -4,55 +4,60 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <link href="layout.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" media="screen" href="js/css/jquery.ketchup.css" />
 
-<script src="jquery.js"></script>
-    <script>
-		$(document).ready(function() {
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.ketchup.all.min.js"></script>
+    
+<script>
+	$(document).ready(function() {
+		hideAll();
+		show("pagina-inicial");
+		
+		$("#pagina-inicial").click(function(event) {
 			hideAll();
 			show("pagina-inicial");
-			
-			$("#pagina-inicial").click(function(event) {
-				hideAll();
-				show("pagina-inicial");
-				return false;
-			});
-			
-			$("#servicos").click(function(event) {
-				hideAll();
-				show("servicos");
-				return false;
-			});
-			
-			$("#sobre").click(function(event) {
-				hideAll();
-				show("sobre");
-				return false;
-			});
-			
-			$("#contato").click(function(event) {
-				hideAll();
-				show("contato");
-				return false;
-			});
-			
-			function show(cont) {
-				$("#conteudo-"+cont).fadeIn("slow");
-				$("#"+cont).addClass("selecionada");
-			}
-			
-			function hideAll() {
-				$("#conteudo-pagina-inicial").hide();
-				$("#pagina-inicial").removeClass("selecionada");
-				$("#conteudo-servicos").hide();
-				$("#servicos").removeClass("selecionada");
-				$("#conteudo-sobre").hide();
-				$("#sobre").removeClass("selecionada");
-				$("#conteudo-contato").hide();
-				$("#contato").removeClass("selecionada");
-			}
-			
+			return false;
 		});
-    </script>
+		
+		$("#servicos").click(function(event) {
+			hideAll();
+			show("servicos");
+			return false;
+		});
+		
+		$("#sobre").click(function(event) {
+			hideAll();
+			show("sobre");
+			return false;
+		});
+		
+		$("#contato").click(function(event) {
+			hideAll();
+			show("contato");
+			return false;
+		});
+		
+		function show(cont) {
+			$("#conteudo-"+cont).fadeIn("slow");
+			$("#"+cont).addClass("selecionada");
+		}
+		
+		function hideAll() {
+			$("#conteudo-pagina-inicial").hide();
+			$("#pagina-inicial").removeClass("selecionada");
+			$("#conteudo-servicos").hide();
+			$("#servicos").removeClass("selecionada");
+			$("#conteudo-sobre").hide();
+			$("#sobre").removeClass("selecionada");
+			$("#conteudo-contato").hide();
+			$("#contato").removeClass("selecionada");
+		}
+		
+		$('#form').ketchup();
+		
+	});
+</script>
 
 <title>Watt Eletricidade</title>
 </head>
@@ -78,20 +83,39 @@
     <div id="conteudo-servicos"> Serviços </div>
     <div id="conteudo-sobre"> Sobre </div>
     <div id="conteudo-contato">
-   		<form method="post" action="contato.php">
-        		<br /><br />        
-   		  <center>
-           	    Nome:   <input type="text" id="nome" name="nome" /><br />
-              E-mail:   <input type="text" id="email" name="email" /><br />
-            Telefone: 	<input type="tel" id="telefone" name="tel" /><br />
-            Mensagem:   <textarea name="texto" id="texto">
-			</textarea><input type="submit" name="submit" id="submit" value="Submit" />
-			<input type="reset" name="resetar" id="resetar" value="Resetar" />
-   		  </center>
-   	  </form>
-            
-        	<img src="contato1.png" alt="Contato" align="left"/>
-            <img src="contato2.png" alt="Contato" align="right" /><br />
+    	<div id="postins">
+            <div id="contato1">
+                <img src="contato1.png" alt="Contato"/>
+            </div>
+            <div id="contato2">
+                <img src="contato2.png" alt="Contato"/>
+            </div>
+        </div>
+        <div id="form">
+        	<div class="aviso">Fale conosco</div>
+            <form method="post" action="contato.php">   
+                <div class="form-input"> 
+                    <label for="nome">Nome: *</label>
+                    <input type="text" id="nome" name="nome" data-validate="validate(required)"/>
+                </div>
+                <div class="form-input"> 
+                    <label for="email">Seu e-mail: *</label>
+                    <input type="text" id="email" name="email" data-validate="validate(required, email)"/>
+                </div>
+                <div class="form-input"> 
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="tel"/>
+                </div>
+                <div class="form-input"> 
+                    <label for="texto">Mensagem: *</label>
+                    <textarea id="texto" name="texto" data-validate="validate(required)"></textarea>
+                </div>
+                <div class="form-buttons">
+                    <input type="submit" name="submit" id="submit" class="botao azul" value="Enviar"/>
+                    <input type="reset" name="resetar" id="resetar" class="botao vermelho" value="Apagar"/>
+                </div>
+            </form>
+    	</div>
     </div>
     
 </body>
