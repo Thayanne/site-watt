@@ -97,6 +97,13 @@ body{
 	margin-bottom:30px;
 }
 
+.titulo{
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	font-size:36px;
+	margin-bottom:50px;
+	}
+
 .form-input {
 	margin-bottom:20px;	
 }
