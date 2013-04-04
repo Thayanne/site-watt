@@ -143,6 +143,18 @@ input[type=text], textarea {
 	border-radius:5px;
 }
 
+td {
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000; 	
+}
+
+td:hover {
+	background-color: #000000;
+}
+
 .botao {
 	-moz-border-radius:6px;
 	-webkit-border-radius:6px;
@@ -199,17 +211,5 @@ input[type=text], textarea {
 	background:-moz-linear-gradient( center top, #e4685d 5%, #fc8d83 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4685d', endColorstr='#fc8d83');
 	background-color:#e4685d;
-}
-
-td {
-	text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000; 	
-}
-
-td:hover {
-	background-color: #000000;
 }
 
