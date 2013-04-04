@@ -65,11 +65,14 @@
         var dataString = 'nome=' + nome + '&email=' + email + '&telefone=' + telefone + '&texto=' + texto;
         $.ajax({
             type: "POST",
-            url: "process.php",
+            url: "contato.php",
             data: dataString,
             success: function() {
                 alert("AAA");
-            }
+            },
+			error: function() {
+				alert("SSS");
+			}
         });
     });
 
