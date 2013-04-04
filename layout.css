@@ -101,8 +101,10 @@ body{
 	font-family:Verdana, Geneva, sans-serif;
 	font-weight:bold;
 	font-size:36px;
+	margin-left:45%;
+	margin-top:30px;
 	margin-bottom:50px;
-	}
+}
 
 .form-input {
 	margin-bottom:20px;	
