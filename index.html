@@ -68,8 +68,10 @@
 						alert("Sua mensagem foi enviada com sucesso para o nosso e-mail. Obrigado!");
 					}
 				});
-				('#form').find("input[type=text], textarea").val("");
-				return false;
+				$("#form").find(":input").each(function() {
+					if (this.type == "text" || this.type == "textarea")
+						$(this).val("");
+				});
 			};
 		});
 
@@ -110,7 +112,7 @@
         </div>
         <div id="form">
         	<div class="aviso">Fale conosco</div>
-            <form method="post" action="index.html">   
+            <form method="post" action="javascript:void(0)">   
                 <div class="form-input"> 
                     <label for="nome">Nome: *</label>
                     <input type="text" id="nome" name="nome" data-validate="validate(required)"/>
