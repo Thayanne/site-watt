@@ -58,23 +58,19 @@
 		$('#form').ketchup();
 		
 		$('#submit').on('click', function() {
-        var nome = $('#nome').val();
-        var email = $('#email').val();
-        var telefone = $('#telefone').val();
-        var texto = $('#texto').val();
-        var dataString = 'nome=' + nome + '&email=' + email + '&telefone=' + telefone + '&texto=' + texto;
-        $.ajax({
-            type: "POST",
-            url: "contato.php",
-            data: dataString,
-            success: function() {
-                alert("AAA");
-            },
-			error: function() {
-				alert("SSS");
-			}
-        });
-    });
+			var dataString = $("#form").serialize();
+			$.ajax({
+				type: "POST",
+				url: "contato.php",
+				data: dataString,
+				success: function() {
+					alert("AAA");
+				},
+				error: function() {
+					alert("SSS");
+				}
+			});
+		});
 
 	});
 </script>
