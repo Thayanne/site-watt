@@ -65,6 +65,15 @@
 
 <body>
 
+<?php
+if(isset($_POST['submit'])) {
+
+
+    
+    echo "<script>alert (\"Sua mensagem foi enviada com sucesso para o nosso e-mail. Obrigado!\")</script>";
+}
+?>
+
     <div id="top"> </div>
     
     <div id="menu">
@@ -94,7 +103,7 @@
         </div>
         <div id="form">
         	<div class="aviso">Fale conosco</div>
-            <form method="post" action="contato.php">   
+            <form method="post" action="index.html">   
                 <div class="form-input"> 
                     <label for="nome">Nome: *</label>
                     <input type="text" id="nome" name="nome" data-validate="validate(required)"/>
