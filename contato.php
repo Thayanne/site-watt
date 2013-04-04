@@ -19,6 +19,6 @@ Mensagem: $texto";
 
 mail("$Destinatario", "$mensagem","From:$email");
 
-echo "<script>alert (\"Sua mensagem foi enviada com sucesso para o nosso e-mail. Obrigado!\")</script>";
+echo "Hello";
 
 ?>
