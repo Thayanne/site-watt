@@ -153,6 +153,7 @@ td {
 
 td:hover {
 	background-color: #000000;
+	cursor:pointer;
 }
 
 .botao {
@@ -211,5 +212,11 @@ td:hover {
 	background:-moz-linear-gradient( center top, #e4685d 5%, #fc8d83 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4685d', endColorstr='#fc8d83');
 	background-color:#e4685d;
+}
+
+#conteudo-aumento-de-carga {
+	background-color:#03F;
+	margin-top:50px;
+	height:500px;	
 }
 
